@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{multicol}
+
+\title{AI1103 Assignment 1}
+\author{Megh Shah - CS20BTECH11032}
+\date{}
+
+\begin{document}
+
+\maketitle
+\begin{multicols*}{2}
+\section*{}
+
+\underline {Problem 2.18}: \newline \newline A man is known to speak truth 3 out of 4 times. He throws a die and reports that it is a six. Find the probability that it is actually a six.
+\newline \newline \underline {Solution 2.18}: \newline \newline Let $\Pr(x=i)$ denote the probability that the number $i$ is obtained on the die.
+\newline Let $\Pr(y=i)$ denote the probability that the $i$ is reported as the number on the die.
+\newline Let $\Pr(z=0)$ denote the probability the man is lying and $\Pr(z=1)$ denotes the probability that the man is telling the truth.
+\newline \newline The notation used here is:
+\newline $\Pr(A=i\cdot B=j)\equiv \Pr(A=i \land B=j)$
+\newline \newline Now, we have to find out: $$\Pr(x=6|y=6)$$
+Recalling Bayes' Theorem: 
+$$ \Pr(A|B)=\frac{\Pr(AB)}{\Pr(B)} ... [1] $$
+Now, $\Pr(x=6 \cdot y=6)$ is only possible when the man is telling the truth (z=1) and the die rolls a 6 (x=6)
+\newline $\Pr(x=6 \cdot y=6)=\Pr(x=6 \cdot z=1)$
+\newline Both of these are independent events, hence by definition:
+$$\Pr(x=6 \cdot z=1)=\Pr(x=6)\Pr(z=1) $$
+$$\Pr(x=6 \cdot z=1)=(1/6)*(3/4)=1/8 $$
+Hence, we have: 
+\newline $\Pr(x=6 \cdot y=6)=1/8 $
+\newline \newline Now for $\Pr(y=6)$:
+\newline We know by symmetry that $$\Pr(y=i) = \Pr(y=j) ... [2]$$ $\forall$ $i,j \in \{ 1,2,3,4,5,6 \}$ 
+\newline \newline Also, since these are all disjoint cases whose union covers all cases, we also have:
+\newline $$ \Pr(y=1)+\Pr(y=2)+...\Pr(y=6) = 1 $$
+\newline From [2], we have 
+$$ \Pr(y=6)+\Pr(y=6)...\Pr(y=6) = 1 $$
+$$ 6\Pr(y=6) = 1 $$
+$$ \Pr(y=6) = 1/6 $$
+Putting the obtained results back in [1],
+$$\Pr(x=6|y=6) = \frac{\Pr(x=6 \cdot y=6)}{\Pr(y=6)} $$
+$$\Pr(x=6|y=6) = \frac{1/8}{1/6} = 3/4$$
+Hence, the required probability is 0.75
+\end{multicols*}
+\end{document}
