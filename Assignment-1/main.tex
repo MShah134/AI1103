@@ -127,37 +127,41 @@ https://github.com/MShah134/AI1103/blob/main/Assignment-1/main.tex
 \section*{Problem}
 A man is known to speak truth 3 out of 4 times. He throws a die and reports that it is a six. Find the probability that it is actually a six.
 \section*{Solution}
-Let $\Pr(x=i)$ denote the probability that the number $i$ is obtained on the die.
-\newline Let $\Pr(y=i)$ denote the probability that the $i$ is reported as the number on the die.
-\newline Let $\Pr(z=0)$ denote the probability the man is lying and $\Pr(z=1)$ denotes the probability that the man is telling the truth.
-\newline \newline The notation used here is:
-\newline $\Pr(A=i\cdot B=j)\equiv \Pr(A=i \land B=j)$
-\newline \newline Now, we have to find out: $$\Pr(x=6|y=6)$$
-Recalling Bayes' Theorem: 
+\begin{enumerate}
+    \item Let $\Pr(X=i)$ denote the probability that the number $i$ is obtained on the die.
+    \newline \item Let $\Pr(Y=i)$ denote the probability that the $i$ is reported as the number on the die.
+    \newline \item Let $\Pr(Z=0)$ denote the probability the man is lying.
+    \newline \item Let $\Pr(Z=1)$ denote the probability that the man is telling the truth.
+\end{enumerate}
+[The notation used here is:
+\newline $\Pr(A=i\cdot B=j)\equiv \Pr(A=i \land B=j)$]
+\newline \newline Now, we have to find out: $\Pr(X=6|Y=6)$
+\newline Recalling Bayes' Theorem: 
 \begin{eqnarray}
    \Pr(A|B)=\frac{\Pr(AB)}{\Pr(B)}    
 \end{eqnarray}
-\newline Now, $\Pr(x=6 \cdot y=6)$ is only possible when the man is telling the truth (z=1) and the die rolls a 6 (x=6)
-\newline $\Pr(x=6 \cdot y=6)=\Pr(x=6 \cdot z=1)$
-\newline Both of these are independent events, hence by definition:
-$$\Pr(x=6 \cdot z=1)=\Pr(x=6)\Pr(z=1) $$
-$$\Pr(x=6 \cdot z=1)=(1/6)*(3/4)=1/8 $$
+\newline Now, $\Pr(X=6 \cdot Y=6)$ is only possible when the man is telling the truth (Z = 1) and the die rolls a six. (X = 6)
+\newline \newline $\Pr(X=6 \cdot Y=6)=\Pr(X=6 \cdot Z=1)$
+\newline These are independent events, hence by definition:
+$$\Pr(X=6 \cdot Z=1)=\Pr(X=6)\Pr(Z=1) $$
+$$\Pr(X=6 \cdot Z=1)=(1/6)*(3/4)=1/8 $$
 Hence, we have: 
-\newline $\Pr(x=6 \cdot y=6)=1/8 $
-\newline \newline Now for $\Pr(y=6)$,
+\newline $\Pr(X=6 \cdot Y=6)=1/8 $
+\newline \newline Now for $\Pr(Y=6)$,
 \newline We know by symmetry that 
 \begin{eqnarray}
-   \Pr(y=i) = \Pr(y=j)
+   \Pr(Y=i) = \Pr(Y=j)
 \end{eqnarray}
 $\forall$ $i,j \in \{ 1,2,3,4,5,6 \}$ 
-\newline \newline Also, since these are all disjoint cases whose union covers all cases, we also have:
-\newline $$ \Pr(y=1)+\Pr(y=2)+...+\Pr(y=6) = 1 $$
-\newline From (2), we have 
-$$ \Pr(y=6)+\Pr(y=6)+...+\Pr(y=6) = 1 $$
-$$ 6\Pr(y=6) = 1 $$
-$$ \Pr(y=6) = 1/6 $$
-Putting the obtained results back in (1),
-$$\Pr(x=6|y=6) = \frac{\Pr(x=6 \cdot y=6)}{\Pr(y=6)} $$
-$$\Pr(x=6|y=6) = \frac{1/8}{1/6} = 3/4$$
-Hence, the required probability is 0.75
+\newline \newline Also, since these are all disjoint cases whose union is 1, (covers all cases) we also have:
+\begin{eqnarray}
+    \sum_{i=1}^{6} \Pr(Y=i) = 1 
+\end{eqnarray}
+\newline From (0.0.2) and (0.0.3), we have 
+$$ 6\Pr(Y=6) = 1 $$
+$$ \Pr(Y=6) = 1/6 $$
+Putting the obtained results back in (0.0.1),
+$$\Pr(X=6|Y=6) = \frac{\Pr(X=6 \cdot Y=6)}{\Pr(Y=6)} $$
+$$\Pr(X=6|Y=6) = \frac{1/8}{1/6} = 3/4$$
+Hence, the required probability is 3/4.
 \end{document}
