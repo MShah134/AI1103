@@ -133,20 +133,18 @@ A man is known to speak truth 3 out of 4 times. He throws a die and reports that
     \newline \item Let $\Pr(Z=0)$ denote the probability the man is lying.
     \newline \item Let $\Pr(Z=1)$ denote the probability that the man is telling the truth.
 \end{enumerate}
-[The notation used here is:
-\newline $\Pr(A=i\cdot B=j)\equiv \Pr(A=i \land B=j)$]
-\newline \newline Now, we have to find out: $\Pr(X=6|Y=6)$
-\newline Recalling Bayes' Theorem: 
+Now, we have to find out: $\Pr(X=6|Y=6)$
+\newline \newline Recalling Bayes' Theorem: 
 \begin{eqnarray}
    \Pr(A|B)=\frac{\Pr(AB)}{\Pr(B)}    
 \end{eqnarray}
-\newline Now, $\Pr(X=6 \cdot Y=6)$ is only possible when the man is telling the truth (Z = 1) and the die rolls a six. (X = 6)
-\newline \newline $\Pr(X=6 \cdot Y=6)=\Pr(X=6 \cdot Z=1)$
+\newline Now, $\Pr(X=6, Y=6)$ is only possible when the man is telling the truth (Z = 1) and the die rolls a six. (X = 6)
+\newline \newline $\Pr(X=6, Y=6)=\Pr(X=6, Z=1)$
 \newline These are independent events, hence by definition:
-$$\Pr(X=6 \cdot Z=1)=\Pr(X=6)\Pr(Z=1) $$
-$$\Pr(X=6 \cdot Z=1)=(1/6)*(3/4)=1/8 $$
+$$\Pr(X=6, Z=1)=\Pr(X=6)\Pr(Z=1) $$
+$$\Pr(X=6, Z=1)=(1/6)*(3/4)=1/8 $$
 Hence, we have: 
-\newline $\Pr(X=6 \cdot Y=6)=1/8 $
+\newline $\Pr(X=6, Y=6)=1/8 $
 \newline \newline Now for $\Pr(Y=6)$,
 \newline We know by symmetry that 
 \begin{eqnarray}
@@ -161,7 +159,7 @@ $\forall$ $i,j \in \{ 1,2,3,4,5,6 \}$
 $$ 6\Pr(Y=6) = 1 $$
 $$ \Pr(Y=6) = 1/6 $$
 Putting the obtained results back in (0.0.1),
-$$\Pr(X=6|Y=6) = \frac{\Pr(X=6 \cdot Y=6)}{\Pr(Y=6)} $$
+$$\Pr(X=6|Y=6) = \frac{\Pr(X=6, Y=6)}{\Pr(Y=6)} $$
 $$\Pr(X=6|Y=6) = \frac{1/8}{1/6} = 3/4$$
 Hence, the required probability is 3/4.
 \end{document}
