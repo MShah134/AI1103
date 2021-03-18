@@ -129,9 +129,9 @@ A man is known to speak truth 3 out of 4 times. He throws a die and reports that
 \section*{Solution}
 \begin{enumerate}
     \item Let $\Pr(X=i)$ denote the probability that the number $i$ is obtained on the die.
-    \newline \item Let $\Pr(Y=i)$ denote the probability that the $i$ is reported as the number on the die.
-    \newline \item Let $\Pr(Z=0)$ denote the probability the man is lying.
-    \newline \item Let $\Pr(Z=1)$ denote the probability that the man is telling the truth.
+    \item Let $\Pr(Y=i)$ denote the probability that the $i$ is reported as the number on the die.
+    \item Let $\Pr(Z=0)$ denote the probability the man is lying.
+    \item Let $\Pr(Z=1)$ denote the probability that the man is telling the truth.
 \end{enumerate}
 Now, we have to find out: $\Pr(X=6|Y=6)$
 \newline \newline Recalling Bayes' Theorem: 
@@ -142,21 +142,19 @@ Now, we have to find out: $\Pr(X=6|Y=6)$
 \newline \newline $\Pr(X=6, Y=6)=\Pr(X=6, Z=1)$
 \newline These are independent events, hence by definition:
 $$\Pr(X=6, Z=1)=\Pr(X=6)\Pr(Z=1) $$
-$$\Pr(X=6, Z=1)=(1/6)*(3/4)=1/8 $$
+$$\Pr(X=6, Z=1)=(1/6)\times (3/4)=1/8 $$
 Hence, we have: 
 \newline $\Pr(X=6, Y=6)=1/8 $
-\newline \newline Now for $\Pr(Y=6)$,
-\newline We know by symmetry that 
+\newline \newline Now by symmetry we have, 
 \begin{eqnarray}
    \Pr(Y=i) = \Pr(Y=j)
 \end{eqnarray}
 $\forall$ $i,j \in \{ 1,2,3,4,5,6 \}$ 
-\newline \newline Also, since these are all disjoint cases whose union is 1, (covers all cases) we also have:
+\newline \newline Also, since these are all disjoint cases whose union is 1, we also have:
 \begin{eqnarray}
     \sum_{i=1}^{6} \Pr(Y=i) = 1 
 \end{eqnarray}
 \newline From (0.0.2) and (0.0.3), we have 
-$$ 6\Pr(Y=6) = 1 $$
 $$ \Pr(Y=6) = 1/6 $$
 Putting the obtained results back in (0.0.1),
 $$\Pr(X=6|Y=6) = \frac{\Pr(X=6, Y=6)}{\Pr(Y=6)} $$
