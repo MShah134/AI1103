@@ -134,34 +134,41 @@ A man is known to speak truth 3 out of 4 times. He throws a die and reports that
     \item Let $\Pr(Z=1)$ denote the probability that the man is telling the truth.
 \end{enumerate}
 Now, we have to find out: $\Pr(X=6|Y=6)$
-\newline \newline Recalling Bayes' Theorem: 
-\begin{eqnarray}
-   \Pr(A|B)=\frac{\Pr(AB)}{\Pr(B)}    
-\end{eqnarray}
-\newline Now, $\Pr(X=6, Y=6)$ is only possible when the man is telling the truth (Z = 1) and the die rolls a six. (X = 6)
+\newline \newline Recalling Bayes' Theorem:
+\begin{align}
+\Pr(A|B)=\frac{\Pr(AB)}{\Pr(B)} 
+\label{Bayes}
+\end{align}
+Now, $\Pr(X=6, Y=6)$ is only possible when the man is telling the truth (Z = 1) and the die rolls a six. (X = 6)
 \newline \newline $\Pr(X=6, Y=6)=\Pr(X=6, Z=1)$
 \newline These are independent events, hence by definition:
-$$\Pr(X=6, Z=1)=\Pr(X=6)\Pr(Z=1) $$
-$$\Pr(X=6, Z=1)=(1/6)\times (3/4)=1/8 $$
+\begin{align}
+\Pr(X=6, Z=1)=\Pr(X=6)\Pr(Z=1) \\
+\Pr(X=6, Z=1)=(1/6) \times (3/4)=1/8
+\end{align}
 Hence, we have: 
 \newline $\Pr(X=6, Y=6)=1/8 $
 \newline \newline Now by symmetry we have, 
-\begin{eqnarray}
+\begin{align}
    \Pr(Y=i) = \Pr(Y=j)
-\end{eqnarray}
+   \label{equal}
+\end{align}
 $\forall$ $i,j \in \{ 1,2,3,4,5,6 \}$ 
 \newline \newline Also, since these are all disjoint cases whose union is 1, we also have:
-\begin{eqnarray}
+\begin{align}
     \sum_{i=1}^{6} \Pr(Y=i) = 1 
-\end{eqnarray}
-\newline From (0.0.2) and (0.0.3), we have 
+    \label{sum}
+\end{align}
+From eq \ref{equal} and \ref{sum}, we have 
 $$ \Pr(Y=6) = 1/6 $$
-Putting the obtained results back in (0.0.1),
+Putting the obtained results back in eq \ref{Bayes},
 $$\Pr(X=6|Y=6) = \frac{\Pr(X=6, Y=6)}{\Pr(Y=6)} $$
 $$\Pr(X=6|Y=6) = \frac{1/8}{1/6} = 3/4$$
 Hence, the required probability is 3/4.
-\newline \newline The table containing the random variables and their probabilities is given by:
+\newline \newline Consider table \ref{table1}:
 \begin{center}
+\captionof{table}{Probabilities of random variables}
+\label{table1}
 \begin{tabular}{ |m{1.75cm}| m{1.75cm}| m{2cm} | } 
 \hline
 Case(s) & Notes & Probability\\ 
