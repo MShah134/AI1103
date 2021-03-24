@@ -128,33 +128,32 @@ https://github.com/MShah134/AI1103/blob/main/Assignment-1/main.tex
 A man is known to speak truth 3 out of 4 times. He throws a die and reports that it is a six. Find the probability that it is actually a six.
 \section*{Solution}
 \begin{enumerate}
-    \item Let $\Pr(X=i)$ denote the probability that the number $i$ is obtained on the die.
-    \item Let $\Pr(Y=i)$ denote the probability that the $i$ is reported as the number on the die.
-    \item Let $\Pr(Z=0)$ denote the probability the man is lying.
-    \item Let $\Pr(Z=1)$ denote the probability that the man is telling the truth.
+    \item Let $\Pr(X=i)$ be the probability that number $i$ is obtained on the die.
+    \item Let $\Pr(Y=i)$ be the probability that number $i$ is reported on the die.
+    \item Let $\Pr(Z=0)$ be the probability the man is lying.
+    \item Let $\Pr(Z=1)$ be the probability that the man is telling the truth.
 \end{enumerate}
-Now, we have to find out: $\Pr(X=6|Y=6)$
-\newline \newline Recalling Bayes' Theorem:
+We have to find: $\Pr(X=6|Y=6)$
 \begin{align}
 \Pr(A|B)=\frac{\Pr(AB)}{\Pr(B)} 
 \label{Bayes}
 \end{align}
-Now, $\Pr(X=6, Y=6)$ is only possible when the man is telling the truth (Z = 1) and the die rolls a six. (X = 6)
+Now, $ X=6, Y=6 \implies X=6, Z=1$ 
+\newline (man is telling the truth and the die rolls a six)
 \newline \newline $\Pr(X=6, Y=6)=\Pr(X=6, Z=1)$
-\newline These are independent events, hence by definition:
+\newline Since these are independent events:
 \begin{align}
 \Pr(X=6, Z=1)=\Pr(X=6)\Pr(Z=1) \\
 \Pr(X=6, Z=1)=(1/6) \times (3/4)=1/8
 \end{align}
-Hence, we have: 
-\newline $\Pr(X=6, Y=6)=1/8 $
-\newline \newline Now by symmetry we have, 
+$\implies \Pr(X=6, Y=6)=1/8 $
+\newline \newline By symmetry we get, 
 \begin{align}
    \Pr(Y=i) = \Pr(Y=j)
    \label{equal}
 \end{align}
 $\forall$ $i,j \in \{ 1,2,3,4,5,6 \}$ 
-\newline \newline Also, since these are all disjoint cases whose union is 1, we also have:
+\newline \newline Also, since these are all disjoint cases whose union is 1, we get:
 \begin{align}
     \sum_{i=1}^{6} \Pr(Y=i) = 1 
     \label{sum}
