@@ -138,37 +138,42 @@ We have to find: $\Pr(X=6|Y=6)$
 \Pr(A|B)=\frac{\Pr(AB)}{\Pr(B)} 
 \label{Bayes}
 \end{align}
-Now, $ X=6, Y=6 \implies X=6, Z=1$ 
-\newline (man is telling the truth and the die rolls a six)
-\newline \newline $\Pr(X=6, Y=6)=\Pr(X=6, Z=1)$
-\newline Since these are independent events:
+Now, $ X=6, Y=6 \implies X=6, Z=1 $ 
+
+(man is telling the truth and the die rolls a six)
+\begin{align*}
+\Pr(X=6, Y=6)=\Pr(X=6, Z=1)
+\end{align*}
+Since these are independent events:
 \begin{align}
 \Pr(X=6, Z=1)=\Pr(X=6)\Pr(Z=1) \\
 \Pr(X=6, Z=1)=(1/6) \times (3/4)=1/8
 \end{align}
-$\implies \Pr(X=6, Y=6)=1/8 $
-\newline \newline By symmetry we get, 
+\begin{align*}
+\implies \Pr(X=6, Y=6)=1/8 
+\end{align*}
+By symmetry we get, 
 \begin{align}
    \Pr(Y=i) = \Pr(Y=j)
    \label{equal}
 \end{align}
 $\forall$ $i,j \in \{ 1,2,3,4,5,6 \}$ 
-\newline \newline Also, since these are all disjoint cases whose union is 1, we get:
+\newline Also, since these are all disjoint cases whose union is 1, we get:
 \begin{align}
     \sum_{i=1}^{6} \Pr(Y=i) = 1 
     \label{sum}
 \end{align}
-From eq \ref{equal} and \ref{sum}, we have 
+From \eqref{equal} and \eqref{sum}, we have 
 $$ \Pr(Y=6) = 1/6 $$
-Putting the obtained results back in eq \ref{Bayes},
+Putting the obtained results back in \eqref{Bayes},
 $$\Pr(X=6|Y=6) = \frac{\Pr(X=6, Y=6)}{\Pr(Y=6)} $$
 $$\Pr(X=6|Y=6) = \frac{1/8}{1/6} = 3/4$$
 Hence, the required probability is 3/4.
 \newline \newline Consider table \ref{table1}:
-\begin{center}
 \begin{table}[h]
-    \centering
-    \begin{tabular}{ |m{1.75cm}| m{1.75cm}| m{2cm} | } 
+\centering
+\resizebox{.45\textwidth}{!}{
+\begin{tabular}{ |m{1.75cm}| m{1.75cm}| m{2cm} | } 
 \hline
 Case(s) & Notes & Probability\\ 
 \hline
@@ -181,8 +186,8 @@ $\Pr(Z=0)$ & - & 1/4 \\
 $\Pr(Z=1)$ & - & 3/4 \\ 
 \hline
 \end{tabular}
-    \caption{Probabilities of random variables}
-    \label{table1}
+}
+\caption{Probabilities of random variables}
+\label{table1}
 \end{table}
-\end{center}
 \end{document}
