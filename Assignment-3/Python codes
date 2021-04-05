@@ -1,0 +1,15 @@
+import random as rd
+
+arr = []
+for i in range(10000):
+    temp_one = rd.randint(1, 6)
+    temp_two = rd.randint(1, 6)
+    temp = temp_one*temp_two
+    arr.append(temp)
+count = 0
+for i in range(10000):
+    for j in range(1, 7):
+        if arr[i] == j**2:
+            count += 1
+prob = count / 10000
+print("The simulated probability is {} and the theoretical probabilty is 0.222".format(prob))
