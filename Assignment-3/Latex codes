@@ -145,8 +145,7 @@ Two dice are thrown simultaneously. The probability that the product of the numb
 The favourable cases for $\{X,Y\}$ are: 
 
 $\{1,1\}$, $\{2,2\}$, $\{3,3\}$, $\{4,4\}$, $\{5,5\}$, $\{6,6\}$, $\{1,4\}$, $\{4,1\}$
-
-(Since the numbers are $\leq 6$, they are either the same or both are perfect squares)
+\newline \newline (Since the numbers are $\leq 6$, they are either the same or both are perfect squares)
 
 Now, for the probability p:
 \begin{align}
@@ -156,11 +155,12 @@ Now, for the probability p:
 \Pr(p) &= 6(1/6)(1/6) + 2(1/6)(1/6) \\ 
 \Pr(p) &= 2/9
 \end{align}
+Hence option (b) 2/9 is correct
 \newline \newline Consider table \ref{table1}:
 \begin{table}[h]
 \centering
-\resizebox{.45\textwidth}{!}{
-\begin{tabular}{ |m{1.75cm}| m{1.75cm}| m{2cm} | } 
+\resizebox{.40\textwidth}{!}{
+\begin{tabular}{ |m{1.75cm}| m{1.75cm}| m{2cm} | }
 \hline
 Case(s) & Notes & Probability\\ 
 \hline
