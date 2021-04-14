@@ -135,7 +135,7 @@ Let $X$ and $Y$ be two random variables having the joint probability density fun
         0 & \text{otherwise}
         \end{cases} 
   \] 
-Then the conditional probability $P(X\leq \frac{2}{3}|Y = \frac{3}{4})$ is equal to ----
+Then the conditional probability $\pr{X\leq \frac{2}{3}|Y = \frac{3}{4}}$ is equal to ----
 \begin{enumerate}
     \item 5/9
     \item 2/3
@@ -145,18 +145,18 @@ Then the conditional probability $P(X\leq \frac{2}{3}|Y = \frac{3}{4})$ is equal
 \section*{Solution}
 From the definition of joint probability density function (PDF), we have:
 \begin{align}
-P((X,Y)\in A) = 
+\pr{(X,Y)\in A} = 
 \iint\limits_A f_{XY}(x.y)\,dx\,dy\qquad
 \end{align}
 Since,
 \begin{align}
-\Pr(A|B)=\frac{\Pr(AB)}{\Pr(B)}    
+\pr{A|B}=\frac{\pr{AB}}{\pr{B}}    
 \end{align}
 Therefore, we have 
 \begin{align}
-P(X\leq \frac{2}{3}|Y = \frac{3}{4}) = \frac{P(X\leq \frac{2}{3}, Y = \frac{3}{4})}{P(Y = \frac{3}{4})}  
+\pr{X\leq \frac{2}{3}|Y = \frac{3}{4}} = \frac{\pr{X\leq \frac{2}{3}, Y = \frac{3}{4}}}{\pr{Y = \frac{3}{4}}}  
 \end{align}
-So we have to consider: $P(X \leq 2/3, Y = 3/4)$ and $P(Y = 3/4)$. They are both lines. 
+So we have to consider: $\pr{X \leq 2/3, Y = 3/4}$ and $\pr{Y = 3/4}$. They are both lines. 
 
 Hence instead of integrating over area in the $XY$ plane, we have to integrate over line segments:
 \begin{align}
@@ -165,7 +165,7 @@ L_2 : 0 < X < 3/4, Y = 3/4
 \end{align}
 Therefore, we have:
 \begin{align}
-P(X\leq \frac{2}{3}|Y = \frac{3}{4}) &= \frac{\int\limits_{L_1} f_{XY}(x.y)\,dx}{\int\limits_{L_2} f_{XY}(x.y)\,dx}  \\
+\pr{X\leq \frac{2}{3}|Y = \frac{3}{4}} &= \frac{\int\limits_{L_1} f_{XY}(x.y)\,dx}{\int\limits_{L_2} f_{XY}(x.y)\,dx}  \\
 &= \frac{\int\limits_{0}^{2/3} 2\,dx}{\int\limits_{0}^{3/4} 2\,dx} \\
 &= \frac{4}{3} \cdot \frac{2}{3} = \frac{8}{9}
 \end{align}
