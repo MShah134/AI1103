@@ -1,0 +1,18 @@
+# %matplotlib inline
+import matplotlib.pyplot as plt
+
+plt.style.use('seaborn-whitegrid')
+import numpy as np
+fig = plt.figure()
+ax = plt.axes()
+x = np.linspace(0, 10, 1000)
+plt.plot(x, x, color = 'blue')
+plt.plot(x, x + 1 - x, color = 'g')
+plt.plot(x, x + 0.75 - x, color = 'red')
+plt.plot(x + 2/3 - x, x, color = 'yellow')
+plt.plot([0, 1/3, 2/3], [0.75, 0.75, 0.75], color = "black")
+plt.plot([2/3, 0.7, 0.75], [0.75, 0.75, 0.75], color = "purple")
+
+
+plt.xlim(0, 2)
+plt.ylim(0, 2)
