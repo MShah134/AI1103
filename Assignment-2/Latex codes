@@ -130,7 +130,7 @@ And Python codes from
 https://github.com/MShah134/AI1103/blob/main/Assignment-2/Python%20codes
 \end{lstlisting}
 \section*{Question}
-Let $X$ and $Y$ be two random variables having the joint probability density function
+GATE EC Q.60: Let $X$ and $Y$ be two random variables having the joint probability density function
 \[
     f(x,y) = \begin{cases}
         2 & \text{for } 0 < x < y < 1\\
